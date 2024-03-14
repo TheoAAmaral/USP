@@ -1,2 +1,0 @@
-- name: Install Arduino CLI
-  uses: arduino/setup-arduino-cli@v1
