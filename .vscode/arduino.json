@@ -1,0 +1,5 @@
+{
+    "sketch": "Arduino/teste/teste.ino",
+    "board": "arduino:avr:uno",
+    "output": "teste.hex"
+}
