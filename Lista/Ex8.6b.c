@@ -60,7 +60,7 @@ int outputChessBoard(){
     return 0;
 }
 
-int
+
 
 int main(){
     while(1){
