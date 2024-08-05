@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/TheoAAmaral/EPs/EP2",
-      "program": "/workspaces/TheoAAmaral/EPs/EP2/build/Debug/outDebug",
+      "cwd": "/workspaces/TheoAAmaral/PCS3111/Aula 1",
+      "program": "/workspaces/TheoAAmaral/PCS3111/Aula 1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
