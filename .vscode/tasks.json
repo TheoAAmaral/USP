@@ -27,7 +27,7 @@
         },
         {
             "label": "Run C File",
-            "command": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "command": "${fileDirname}/main",
             "presentation": {
                 "echo": false,
                 "reveal": "always",
@@ -42,7 +42,7 @@
             "label": "Build and Test active file.",
             "detail": "Builds and Runs file automatically. Problems will be outputted on \"problems\" tab.",
             "dependsOn":[
-                "C: gcc arquivo de build ativo",
+                "g++ build active file",
                 "Run C File"
             ],
             "dependsOrder": "sequence",
@@ -56,9 +56,11 @@
             "label": "g++ build active file",
             "command": "g++",
             "args": [
-                "${file}",
+                "-ggdb",
+                "-Iinclude",
+                "*.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "main"
             ],
             "options": {
                 "cwd": "${fileDirname}"
