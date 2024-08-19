@@ -15,11 +15,6 @@ class Reserva
     int quarto;
     int inicio = 0;
     int fim = 0;
-
-
-
-
-    
 public:
 
     void setQuarto(int numeroDoQuarto);
