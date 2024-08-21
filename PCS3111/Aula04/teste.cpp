@@ -25,9 +25,9 @@ void teste2() {
     quarto25->setInicio(5);
     quarto25->setQuarto(25);
 
-    Hotel *hotel = new Hotel;
+    Hotel *tel = new Hotel;
 
-    hotel->adicionar(quarto22);
-    hotel->adicionar(quarto25);
-    hotel->imprimir();  
+    tel->adicionar(quarto22);
+    tel->adicionar(quarto25);
+    tel->imprimir();  
 }
