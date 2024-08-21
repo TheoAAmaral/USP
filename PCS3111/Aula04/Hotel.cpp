@@ -18,13 +18,13 @@ bool Hotel::adicionar(Reserva* reserva){
 bool Hotel::estaDisponivel(int quarto, int inicio, int fim){
     Reserva *reserva = nullptr;
     for(int i = 0; i < numeroDeReservas; i++){
-        if(quarto == reservas[i]->getQuarto())
+        if(quarto == reservas[i]->getQuarto()){
             reserva = reservas[i];
+            if((inicio >= reserva->getInicio() && inicio < reserva->getFim()) || (fim > reserva->getInicio() && fim <= reserva->getFim()))
+                return false;
+        }
     }
-    if((inicio >= reserva->getInicio() && inicio < reserva->getFim()) || (fim > reserva->getInicio() && fim <= reserva->getFim()))
-        return false;
-    else
-        return true;
+    return true;
 }
 
 Reserva* Hotel::getReserva(int i){

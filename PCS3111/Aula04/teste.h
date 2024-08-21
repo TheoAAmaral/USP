@@ -29,5 +29,5 @@ void teste2() {
 
     hotel->adicionar(quarto22);
     hotel->adicionar(quarto25);
-    hotel->imprimir();  
+    hotel->imprimir();
 }
