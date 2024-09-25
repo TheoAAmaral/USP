@@ -28,6 +28,8 @@ void teste2() {
     Hotel *hotel = new Hotel;
 
     hotel->adicionar(quarto22);
-    hotel->adicionar(quarto25);
+    quarto22 -> setInicio(9);
+    quarto22 -> setFim(10);
+    hotel->adicionar(quarto22);
     hotel->imprimir();
 }

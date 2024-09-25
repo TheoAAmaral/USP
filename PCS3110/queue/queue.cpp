@@ -4,28 +4,28 @@ using namespace std;
 
 class List{
     public:
-        int key;
-        List *start = nullptr;
-        List *next = nullptr;
+        int chave;
+        List *inicio = nullptr;
+        List *proximo = nullptr;
 };
 
 bool queueEmpty(List *q){
-    return q->start == nullptr;
+    return q->inicio == nullptr;
 }
 
 void enqueue(List *q, int key){
     List *actual = nullptr;
     if(queueEmpty(q)){
-        q->start = new List;
-        q->start->key = key;
+        q->inicio = new List;
+        q->inicio->chave = key;
     }
     else{
-        actual = q->start;
-        while(actual->next != nullptr){
-            actual = actual->next;
+        actual = q->inicio;
+        while(actual->proximo != nullptr){
+            actual = actual->proximo;
         }
-        actual->next = new List;
-        actual->next->key = key;
+        actual->proximo = new List;
+        actual->proximo->chave = key;
     }
 
     actual = nullptr;
@@ -34,10 +34,10 @@ void enqueue(List *q, int key){
 }
 int dequeue(List *q){
     List *newStart = nullptr;
-    List *oldStart = q->start;
-    int key = q->start->key;
-    newStart = q->start->next;
-    q->start = newStart;
+    List *oldStart = q->inicio;
+    int key = q->inicio->chave;
+    newStart = q->inicio->proximo;
+    q->inicio = newStart;
     newStart = nullptr;
     delete newStart;
     delete oldStart;

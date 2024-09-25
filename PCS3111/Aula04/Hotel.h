@@ -13,7 +13,7 @@ class Hotel {
 public:
     bool adicionar(Reserva* reserva);
 
-    bool estaDisponivel(int quarto, int inicio, int fim);
+    bool estaDisponivel(int quarto,int inicio, int fim);
 
     Reserva* getReserva(int i);
     
