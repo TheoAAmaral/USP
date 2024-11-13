@@ -1,31 +1,6 @@
 {
     "tasks": [
         {
-            "label": "C/C++: gcc arquivo de build ativo",
-            "command": "/usr/bin/gcc",
-            "args": [
-                "-Wall",
-                "-ansi",
-                "-O2",
-                "-pedantic",
-                "-o",
-                "${fileBasenameNoExtension}.out",
-                "${fileDirname}/${fileBasename}"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build"
-            },
-            "presentation": {
-                "reveal": "never"
-            }
-        },
-        {
             "label": "Run C File",
             "command": "${fileDirname}/main",
             "presentation": {
@@ -35,6 +10,9 @@
                 "panel": "shared",
                 "showReuseMessage": false,
                 "clear": true
+            },
+            "options": {
+                "cwd": "${fileDirname}"
             },
             "group": "test"
         },

@@ -2,11 +2,11 @@
 
 GerenciadorDeUsuario::GerenciadorDeUsuario(int maximo){
     this -> MaximoUsuarios = maximo;
-    U = new Usuario*[MaximoUsuarios];
+    usuarios = new Usuario*[MaximoUsuarios];
 }
 
 GerenciadorDeUsuario::~GerenciadorDeUsuario(){
-    delete[] U;
+    delete[] usuarios;
 }
 
 bool GerenciadorDeUsuario::adicionar(Usuario* u){
@@ -14,27 +14,27 @@ bool GerenciadorDeUsuario::adicionar(Usuario* u){
         return false;
     }
     for(int i=0;i < Quantidade;i++){//Verifica se o usuario ja nao esta na lista
-        if(u->getId() == U[i]->getId()){
+        if(u->getId() == usuarios[i]->getId()){
             return false;
         }
     }
     //coloca o usuario no ultimo item do vetor
-    U[Quantidade] = u;
+    usuarios[Quantidade] = u;
     Quantidade++;
     return true;
 }
 
 Usuario *GerenciadorDeUsuario::getUsuario(int id){
     for(int k=0;k < Quantidade; k++){
-        if(U[k] -> getId() == id){
-            return U[k];
+        if(usuarios[k] -> getId() == id){
+            return usuarios[k];
         }
     }
     return nullptr;
 }
 
 Usuario** GerenciadorDeUsuario::getUsuarios(){
-    return U;
+    return usuarios;
 }
 
 int GerenciadorDeUsuario::getQuantidade(){

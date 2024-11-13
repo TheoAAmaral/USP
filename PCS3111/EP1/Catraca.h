@@ -4,7 +4,7 @@
 
 class Catraca{
     private:
-        GerenciadorDeUsuario* Gerenciador;
+        GerenciadorDeUsuario* gerenciador;
 
     public:
         Catraca(GerenciadorDeUsuario* g);

@@ -17,7 +17,7 @@ int printInicio(){
     return opcao;
 }
 
-Data* getData(){
+Data* pegaData(){
     int hora, minuto, segundo, dia, mes, ano;
     cout << "Hora: ";
     cin >> hora;
@@ -55,7 +55,7 @@ void menu(){
             cin >> catraca;
             cout << "Id: ";
             cin >> id;
-            data = getData();
+            data = pegaData();
             if(!catraca)
                 abriu = catraca0->entrar(id, data);
             else
@@ -76,7 +76,7 @@ void menu(){
             cin >> catraca;
             cout << "Id: ";
             cin >> id;
-            data = getData();
+            data = pegaData();
             if(!catraca)
                 abriu = catraca0->sair(id, data);
             else
@@ -99,7 +99,7 @@ void menu(){
             cin >> modo;
             cout << "Id: ";
             cin >> id;
-            data = getData();
+            data = pegaData();
 
             if(modo == 'e'){
                 passou = gerenciador->getUsuario(id)->registrarEntradaManual(data);
