@@ -4,10 +4,10 @@
 
 class Aluno: public Usuario{
     private:
-        static const int HORARIO_INICIO = 0;
         static int horaFim;
         static int minutoFim;
     public: 
+        static const int HORARIO_INICIO = 6;
         Aluno(int id, string nome);
         virtual ~Aluno();
 

@@ -9,6 +9,7 @@ Visitante::Visitante(int id, string nome, Data* inicio, Data* fim):Usuario(id, n
         throw new logic_error("Data de inicio e/ou fim invalidas");
     this->inicio = inicio;
     this->fim = fim;
+    registros = new vector<Registro*>;
 }
 
 Visitante::~Visitante(){

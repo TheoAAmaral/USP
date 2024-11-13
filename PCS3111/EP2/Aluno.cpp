@@ -7,7 +7,9 @@
 int Aluno::horaFim = 23;
 int Aluno::minutoFim = 0;
 
-Aluno::Aluno(int id, string nome): Usuario(id, nome){}
+Aluno::Aluno(int id, string nome): Usuario(id, nome){
+    registros = new vector<Registro*>;
+}
 
 Aluno::~Aluno(){}
 
