@@ -50,6 +50,14 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "[VHDL] Assemble and run",
+            "command": "ghdl -a ${fileDirname}/*.vhd; ghdl -e multiplicador_tb; ghdl -r multiplicador_tb --vcd=${fileDirname}/saida.vcd",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ],
     "version": "2.0.0"
