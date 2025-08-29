@@ -53,12 +53,21 @@
         },
         {
             "label": "[VHDL] Assemble and run",
-            "command": "ghdl -a ${fileDirname}/*.vhd; ghdl -e multiplicador_tb; ghdl -r multiplicador_tb --vcd=${fileDirname}/saida.vcd",
+            "command": "ghdl -a ${fileDirname}/*.vhd; ghdl -e ${input:top_entity}; ghdl -r ${input:top_entity} --vcd=${fileDirname}/saida.vcd",
             "group": {
                 "kind": "build",
-                "isDefault": false
-            }
+                "isDefault": true
+            },
+            "type": "shell"
         }
     ],
-    "version": "2.0.0"
+    "version": "2.0.0",
+    "inputs": [
+        {
+        "id": "top_entity",
+        "default": "testbench",
+        "type": "promptString",
+        "description": "Selecione o nome da entidade-topo:"
+        }
+    ]
 }
