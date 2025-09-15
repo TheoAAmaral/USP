@@ -6,6 +6,6 @@ void teste2();
 void teste3();
 
 int main(){
-    teste1(); // substitua pelo teste que desejar
+    teste2(); // substitua pelo teste que desejar
     return 0;
 }

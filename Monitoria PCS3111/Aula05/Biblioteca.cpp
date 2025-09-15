@@ -3,11 +3,16 @@
 using namespace std;
 
 Biblioteca::Biblioteca(int maximo){
-    // implemente
+    this->maximo = maximo;
+    reservas = new Reserva*[maximo];
+    salas = new SalaDeEstudo*[maximo];
+    quantidadeDeReservas = 0;
+    quantidadeDeSalas = 0;
 }
 
 Biblioteca::~Biblioteca(){
-    // implemente
+    delete[] reservas;
+    delete[] salas; 
 }
 
 SalaDeEstudo** Biblioteca::getSalasDeEstudo(){
@@ -55,6 +60,14 @@ void Biblioteca::imprimirReservas(){
 }
 
 int Biblioteca::terminarReservas(int horaAtual){
-    // implemente
+    for(int i = 0; i < quantidadeDeReservas; i++){
+        if(reservas[i]->calculaDuracao()+reservas[i]->getHoraInicio() <= horaAtual){
+            delete reservas[i];
+            quantidadeDeReservas--;
+            for(int j = i; j < quantidadeDeReservas; j++){
+                reservas[j] = reservas[j+1];
+            }
+        }
+    }
     return 0;
 }

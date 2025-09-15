@@ -4,6 +4,13 @@
 using namespace std;
 
 // Implemente o construtor e destrutor
+Reserva::Reserva(int quantidadeDeAlunos, int horaInicio, SalaDeEstudo* sala){
+    this->quantidadeDeAlunos = quantidadeDeAlunos;
+    this->horaInicio = horaInicio;
+    this->sala = sala;
+}
+
+Reserva::~Reserva(){}
 
 int Reserva::getQuantidadeDeAlunos(){
     return quantidadeDeAlunos;

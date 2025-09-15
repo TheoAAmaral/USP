@@ -1,5 +1,7 @@
-// faça os includes necessários
+#include "SalaDeEstudo.h"
 
 void teste1(){
-    // implemente
+    SalaDeEstudo *s1 = new SalaDeEstudo(1, 30);
+    s1->imprimir();
+    delete s1;
 }

@@ -17,7 +17,7 @@
             "group": "test"
         },
         {
-            "label": "Build and Test active file.",
+            "label": "[C/C++] Build and Test active file.",
             "detail": "Builds and Runs file automatically. Problems will be outputted on \"problems\" tab.",
             "dependsOn":[
                 "g++ build active file",
@@ -38,7 +38,7 @@
                 "-Iinclude",
                 "*.cpp",
                 "-o",
-                "main"
+                "main.o"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -48,7 +48,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": "**/*.cpp"
             }
         },
         {
@@ -56,7 +56,7 @@
             "command": "ghdl -a ${fileDirname}/*.vhd; ghdl -e ${input:top_entity}; ghdl -r ${input:top_entity} --vcd=${fileDirname}/saida.vcd",
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": "**/*.vhd"
             },
             "type": "shell"
         }
